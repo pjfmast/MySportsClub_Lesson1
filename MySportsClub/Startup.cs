@@ -23,7 +23,9 @@ namespace MySportsClub {
         public void ConfigureServices(IServiceCollection services) {
             services.AddControllersWithViews();
 
-            services.AddTransient<IWorkoutRepository, JsonWorkoutRepository>();
+            //services.AddTransient<IWorkoutRepository, JsonWorkoutRepository>();
+            services.AddTransient<IWorkoutRepository, FakeWorkoutRepository>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
