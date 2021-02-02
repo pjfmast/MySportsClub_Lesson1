@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace MySportsClub.Models {
     public class Workout {
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string Title { get; set; }
         public string Instructor { get; set; }
         public string Location { get; set; }
