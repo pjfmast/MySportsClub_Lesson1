@@ -9,11 +9,11 @@ namespace MySportsClub.Models
 {
     public class JsonWorkoutRepository : IWorkoutRepository
     {
-        IQueryable<Workout> IWorkoutRepository.AllWorkouts
+        IEnumerable<Workout> IWorkoutRepository.AllWorkouts
             => LoadJson().AsQueryable();
 
 
-        public IQueryable<Workout> EnrolledWorkouts(int id)
+        public IEnumerable<Workout> EnrolledWorkouts(int id)
         {
             throw new NotImplementedException();
         }

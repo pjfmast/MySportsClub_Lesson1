@@ -34,6 +34,20 @@ namespace MySportsClub.Controllers {
             return View(workouts);
         }
 
+        public IActionResult Details(int? id) {
+            if (id == null) {
+                return NotFound();
+            }
+
+            var workout = _workoutRepository.AllWorkouts
+                .FirstOrDefault(workout => workout.Id == id);
+            if (workout == null) {
+                return NotFound();
+            }
+
+            return View(workout);
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error() {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });

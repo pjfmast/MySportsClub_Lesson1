@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace MySportsClub.Data {
     public interface IWorkoutRepository {
 
-        IQueryable<Workout> AllWorkouts { get; }
+        IEnumerable<Workout> AllWorkouts { get; }
 
     }
 }
